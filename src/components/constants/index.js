@@ -1,11 +1,11 @@
 export const NavBarLinks = [
   {
-    id: 'Trending',
-    link: 'Trending'
+    id: 'trending',
+    link: 'trending'
   },
   {
-    id: 'Upcoming',
-    link: 'Upcoming'
+    id: 'upcoming',
+    link: 'upcoming'
   },
   {
     id: 'TopRated',
