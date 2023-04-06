@@ -1,15 +1,12 @@
 import { useEffect, useState } from 'react'
-
-const API_KEY = import.meta.env.VITE_APi_KEY
-const BASE_URL = 'https://api.themoviedb.org/3/movie/'
-const MOVIES_URL = `${BASE_URL}popular?api_key=${API_KEY}&language=en-US`
+import { POPULAR_MOVIES_URL } from '../../config'
 
 export function useTopMovie ({ currentPage }) {
   const [topMovies, setTopMovies] = useState([])
   const [totalPages, setTotalPages] = useState(1)
 
   useEffect(() => {
-    fetch(`${MOVIES_URL}&page=${currentPage}`)
+    fetch(`${POPULAR_MOVIES_URL}&page=${currentPage}`)
       .then(res => res.json())
       .then(data => {
         const topMoviesResponse = data.results
