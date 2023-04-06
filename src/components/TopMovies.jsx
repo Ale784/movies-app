@@ -46,7 +46,7 @@ export function TopMovies () {
                 key={movie.id} className=' flex
                   bg-[#1F2937] overflow-hidden shadow-lg cursor-pointer p-2 border-b-2 border-gray-600 pb-9'
               >
-                <Link to={`/details/${movie.id}`}>
+                <Link to={`/details/${movie.id}`} className='flex'>
                   <img
                     src={`${IMAGE}${movie.poster_path}`} width='100px' height='20px'
                     className='rounded-t-lg '
