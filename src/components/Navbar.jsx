@@ -4,8 +4,10 @@ import menu from '../../public/menu.svg'
 import close from '../../public/close.svg'
 import { NavBarLinks } from './constants'
 
-const NavBarLink = ({ link }) => (
-  <li>{link}</li>
+const NavBarLink = ({ link, isSelected }) => (
+  <a href={`/movies/${link}`}>
+    <li>{link}</li>
+  </a>
 )
 
 export function NavBar () {
@@ -13,7 +15,9 @@ export function NavBar () {
 
   return (
     <nav className='flex justify-between items-center p-5 cursor-pointer'>
-      <h1 className='text-3xl'>Movies</h1>
+      <a href='/'>
+        <h1 className='text-3xl'>Movies</h1>
+      </a>
 
       {/** Desk view */}
       <ul className='sm:flex hidden gap-6 bg-primary_variant p-3 rounded-2xl'>
