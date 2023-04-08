@@ -25,7 +25,7 @@ export function TopMovies () {
 
             <article
               key={movie.id} className='bg-white rounded overflow-hidden shadow-lg cursor-pointer p-1
-              w-52'
+              w-52 hover:scale-105'
             >
               <Link to={`/details/${movie.id}`}>
                 <img src={`${IMAGE}${movie.poster_path}`} />
@@ -45,11 +45,13 @@ export function TopMovies () {
           {topMovies && (
 
             topMovies.map((movie) => (
-              <article
-                key={movie.id} className=' flex
-                  bg-[#1F2937] overflow-hidden shadow-lg cursor-pointer p-2 border-b-2 border-gray-600 pb-9'
+              <Link
+                to={`/details/${movie.id}`}
+                key={movie.id} className='flex items-center
+                  bg-[#1F2937] overflow-hidden shadow-lg cursor-pointer p-2
+                  border-b-2 border-gray-600'
               >
-                <Link to={`/details/${movie.id}`} className='flex'>
+                <article className='flex items-center w-full'>
                   <img
                     src={`${IMAGE}${movie.poster_path}`} width='100px' height='20px'
                     className='rounded-t-lg '
@@ -59,8 +61,8 @@ export function TopMovies () {
                     <span className='font-bold '>{movie.original_title}</span>
                     <span className='text-base text-gray-400'>Release: {movie.release_date}</span>
                   </footer>
-                </Link>
-              </article>
+                </article>
+              </Link>
             ))
 
           )}
