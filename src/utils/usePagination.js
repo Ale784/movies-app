@@ -6,7 +6,6 @@ export function usePagination () {
   const nextPage = () => {
     if (currentPage >= 1) {
       setCurrentPage(currentPage + 1)
-      console.log(currentPage)
     }
   }
 
