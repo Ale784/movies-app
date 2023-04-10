@@ -38,8 +38,8 @@ export function TopMovies () {
       </div>
 
       {/** Mobile view */}
-      <div className='grid-cols-1 sm:hidden flex items-center justify-center'>
-        <div className='flex flex-col w-full max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700'>
+      <div className='grid-cols-1 sm:hidden flex'>
+        <div className='flex flex-col w-full max-w-md p-4 border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700'>
 
           <div className='flex items-center justify-between mb-4'>
             <h5 className='text-xl font-bold leading-none text-gray-900 dark:text-white'>
@@ -48,7 +48,7 @@ export function TopMovies () {
             <span className='text-gray-900 dark:text-white'>Page {currentPage} out of {totalPages}</span>
           </div>
 
-          <div className='w-full max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700'>
+          <div className='w-full max-w-md bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700'>
             {topMovies && (
 
               topMovies.map((movie) => (
