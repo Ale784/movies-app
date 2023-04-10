@@ -11,7 +11,7 @@ export function useTopMovie ({ currentPage }) {
       .then(data => {
         const topMoviesResponse = data.results
         setTopMovies(topMoviesResponse)
-        setTotalPages(topMoviesResponse.total_pages)
+        setTotalPages(data.total_pages)
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
       })
   }, [currentPage])
