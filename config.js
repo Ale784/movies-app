@@ -1,4 +1,4 @@
-export const IMAGE = 'https://image.tmdb.org/t/p/w200'
+export const IMAGE = 'https://image.tmdb.org/t/p/w400'
 export const API_KEY = import.meta.env.VITE_APi_KEY
 export const BASE_URL = 'https://api.themoviedb.org/3/movie/'
 
